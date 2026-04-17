@@ -1,5 +1,7 @@
 """Command-line entry point for a Finnhub-only market signal + news dashboard."""
 
+from __future__ import annotations
+
 import streamlit as st
 import pandas as pd
 
@@ -30,8 +32,6 @@ try:
 except Exception as e:
     st.error(f"Render failed: {e}")
     raise
-
-from __future__ import annotations
 
 import argparse
 import json
