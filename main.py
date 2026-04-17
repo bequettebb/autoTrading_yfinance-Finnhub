@@ -1,5 +1,36 @@
 """Command-line entry point for a Finnhub-only market signal + news dashboard."""
 
+import streamlit as st
+import pandas as pd
+
+st.title("Debug test")
+st.write("App started")
+
+try:
+    st.write("Step 1: importing config...")
+    from config.settings import AppSettings, SettingsError, load_settings
+    st.success("Config import OK")
+except Exception as e:
+    st.error(f"Config import failed: {e}")
+    raise
+
+try:
+    st.write("Step 2: loading settings...")
+    settings = load_settings()
+    st.success("Settings loaded")
+    st.write(settings)
+except Exception as e:
+    st.error(f"Settings load failed: {e}")
+    raise
+
+try:
+    st.write("Step 3: rendering test table...")
+    st.dataframe(pd.DataFrame({"a": [1, 2], "b": [3, 4]}))
+    st.success("Rendering works")
+except Exception as e:
+    st.error(f"Render failed: {e}")
+    raise
+
 from __future__ import annotations
 
 import argparse
