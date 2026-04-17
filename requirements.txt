@@ -1,0 +1,9 @@
+# Runtime dependencies inferred from the current codebase.
+# Python 3.11+ is expected.
+
+numpy>=1.26
+pandas>=2.2
+python-dotenv>=1.2,<2.0
+torch>=2.2
+xgboost>=2.0
+yfinance>=0.2.54
