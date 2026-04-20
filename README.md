@@ -1,11 +1,11 @@
-# Auto Trading Codex (Finnhub Only)
+# Auto Trading Codex (Finnhub Only version)
 
 Market monitor that uses yfinance for stock prices and Finnhub for news, then renders a real-time dashboard + news context.
 
-## Quick Start (macOS)
+## Quick Start (for macOS)
 
 ```bash
-cd /Users/a2485/Desktop/auto_trading_codexFInnHUB
+cd ~your location
 cp .env.example .env
 ```
 
